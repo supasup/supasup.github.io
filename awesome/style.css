@@ -6,7 +6,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Change from height to min-height */
+  padding: 10px; /* Add some padding */
 }
 
 .thank-you-container {
@@ -15,6 +16,10 @@ body {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto; /* Center vertically */
 }
 
 .thank-you-container h1 {
@@ -34,7 +39,20 @@ body {
 }
 
 .congrats-img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .thank-you-container {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thank-you-container {
+      padding: 10px;
+  }
 }
